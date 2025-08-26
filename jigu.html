@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jigu — One Page Bootstrap</title>
+
+  <!-- Bootstrap 5 CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <!-- Bootstrap Icons (optional) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    /* Minimal extras to make it pretty, all in this one file */
+    :root {
+      --jigu-accent: #6f42c1;
+    }
+
+    .navbar-brand span {
+      color: var(--jigu-accent);
+      font-weight: 700;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(111, 66, 193, .1), rgba(13, 110, 253, .08));
+      padding: 6rem 0 5rem;
+    }
+
+    .hero .badge {
+      background: rgba(111, 66, 193, .15);
+      color: var(--jigu-accent);
+      border: 1px solid rgba(111, 66, 193, .25);
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(111, 66, 193, .1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, .08);
+    }
+
+    .section-title .line {
+      width: 64px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--jigu-accent);
+      margin: .5rem auto 0;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#home">
+        J<span>igu</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#showcase">Showcase</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="#contact">
+              <i class="bi bi-send"></i> Contact
+            </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <span class="badge rounded-pill mb-3">Made with Bootstrap 5</span>
+          <h1 class="display-5 fw-bold mb-3">
+            Build sleek pages, faster — with <span class="text-primary">Jigu</span>
+          </h1>
+          <p class="lead text-secondary mb-4">
+            A clean one-page starter that uses only Bootstrap and a sprinkle of inline CSS.
+            Copy, tweak, and ship your idea in minutes.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#features" class="btn btn-primary btn-lg">
+              <i class="bi bi-lightning-charge"></i> Get Started
+            </a>
+            <a href="#showcase" class="btn btn-outline-secondary btn-lg">
+              <i class="bi bi-image"></i> View Showcase
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="ratio ratio-16x9 rounded-3 overflow-hidden">
+                <iframe srcdoc='
+                    <style>
+                      body{margin:0;font:16px system-ui, -apple-system, Segoe UI, Roboto;}
+                      .wrap{display:grid;place-items:center;inset:0;position:absolute;background:linear-gradient(135deg,#6f42c120,#0d6efd20);}
+                      .pane{background:#fff;border-radius:16px;padding:24px;box-shadow:0 1rem 2rem rgba(0,0,0,.1)}
+                      h2{margin:0 0 8px}
+                      p{margin:0;color:#475569}
+                      .dot{width:10px;height:10px;border-radius:50%;background:#6f42c1;display:inline-block;margin-right:6px}
+                    </style>
+                    <div class="wrap">
+                      <div class="pane">
+                        <h2>Live Preview</h2>
+                        <p><span class="dot"></span>All in a single HTML file</p>
+                      </div>
+                    </div>' title="Preview" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 section-title">
+        <h2 class="fw-bold">Why Jigu?</h2>
+        <div class="line"></div>
+        <p class="text-secondary mt-3 mb-0">Simple, lightweight, and ready to extend.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="p-4 border rounded-4 h-100 card-hover">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-box-seam fs-4"></i>
+            </div>
+            <h5 class="fw-semibold">Single File</h5>
+            <p class="text-secondary mb-0">Everything (HTML, a bit of CSS, and Bootstrap CDN) lives in one file.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="p-4 border rounded-4 h-100 card-hover">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-bootstrap fs-4"></i>
+            </div>
+            <h5 class="fw-semibold">Bootstrap Powered</h5>
+            <p class="text-secondary mb-0">Use familiar utilities, grid, and components out of the box.</p>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="p-4 border rounded-4 h-100 card-hover">
+            <div class="feature-icon mb-3">
+              <i class="bi bi-speedometer2 fs-4"></i>
+            </div>
+            <h5 class="fw-semibold">Fast & Responsive</h5>
+            <p class="text-secondary mb-0">Mobile-first layout with crisp spacing and accessible contrast.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase -->
+  <section id="showcase" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5 section-title">
+        <h2 class="fw-bold">Showcase</h2>
+        <div class="line"></div>
+        <p class="text-secondary mt-3 mb-0">Drop in your screenshots or product shots.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img class="card-img-top" src="https://picsum.photos/600/400?random=1" alt="Showcase 1" />
+            <div class="card-body">
+              <h5 class="card-title">Clean UI</h5>
+              <p class="card-text text-secondary">A neat aesthetic using Bootstrap spacing and cards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img class="card-img-top" src="https://picsum.photos/600/400?random=2" alt="Showcase 2" />
+            <div class="card-body">
+              <h5 class="card-title">Responsive Grid</h5>
+              <p class="card-text text-secondary">Layout adapts from mobile to desktop with no extra work.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <img class="card-img-top" src="https://picsum.photos/600/400?random=3" alt="Showcase 3" />
+            <div class="card-body">
+              <h5 class="card-title">Easy to Extend</h5>
+              <p class="card-text text-secondary">Add sections, modals, or forms as your project grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center mt-5">
+        <a href="#contact" class="btn btn-lg btn-primary">
+          <i class="bi bi-chat-dots"></i> Start a Conversation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 section-title">
+        <h2 class="fw-bold">FAQ</h2>
+        <div class="line"></div>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1">
+              Is this really just one file?
+            </button>
+          </h2>
+          <div id="a1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Yep. HTML + a tiny CSS block, with Bootstrap and icons pulled from CDNs.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2">
+              Can I remove or reorder sections?
+            </button>
+          </h2>
+          <div id="a2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Absolutely—delete what you don’t need and shuffle sections as you like.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="q3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3">
+              How do I customize colors?
+            </button>
+          </h2>
+          <div id="a3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Change <code>--jigu-accent</code> in the CSS block or use Bootstrap utility classes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5 section-title">
+        <h2 class="fw-bold">Contact</h2>
+        <div class="line"></div>
+        <p class="text-secondary mt-3 mb-0">Send a quick message—no backend required.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <form class="p-4 border rounded-4 bg-white">
+            <div class="mb-3">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-control" id="name" placeholder="Your name" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="msg">Message</label>
+              <textarea class="form-control" id="msg" rows="4" placeholder="How can we help?"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">
+              <i class="bi bi-send"></i> Send
+            </button>
+          </form>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="p-4 border rounded-4 bg-white h-100">
+            <h5 class="fw-semibold mb-3">Quick Details</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><i class="bi bi-geo-alt"></i> Ahmedabad, India</li>
+              <li class="mb-2"><i class="bi bi-envelope"></i> hello@jigu.example</li>
+              <li><i class="bi bi-clock"></i> Mon–Fri · 9:00–18:00 IST</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+      <p class="mb-0 text-secondary">© <span id="year"></span> Jigu. All rights reserved.</p>
+      <div class="d-flex gap-3">
+        <a class="text-secondary" href="#"><i class="bi bi-twitter-x"></i></a>
+        <a class="text-secondary" href="#"><i class="bi bi-github"></i></a>
+        <a class="text-secondary" href="#"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle (JS + Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
